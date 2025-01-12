@@ -15,24 +15,24 @@ struct BottomSection: View {
 
     var body: some View {
         VStack(alignment: .center, spacing: .zero) {
-            Image(.dataPrivacy)
-                .resizable()
-                .foregroundStyle(onboardingProvider.configuration.accentColor)
-                .frame(width: 32, height: 32)
-            Group {
-                Text("\(Bundle.main.displayName ?? "Default App Name") collects your activity, which is not associated with your Apple ID, in order to improve and personalize the application. ")
-                    .foregroundStyle(.secondary) +
-                Text("See how your data is managed...")
-                    .foregroundStyle(onboardingProvider.configuration.accentColor)
-                    .bold()
-            }
-            .multilineTextAlignment(.center)
-            .font(.system(size: 10))
-            .padding(.bottom, 24)
-            .padding(.top, 4)
-            .onTapGesture {
-                isDataPrivacyPresented.toggle()
-            }
+//            Image(.dataPrivacy)
+//                .resizable()
+//                .foregroundStyle(onboardingProvider.configuration.accentColor)
+//                .frame(width: 32, height: 32)
+//            Group {
+//                Text("\(Bundle.main.displayName ?? "Default App Name") collects your activity, which is not associated with your Apple ID, in order to improve and personalize the application. ")
+//                    .foregroundStyle(.secondary) +
+//                Text("See how your data is managed...")
+//                    .foregroundStyle(onboardingProvider.configuration.accentColor)
+//                    .bold()
+//            }
+//            .multilineTextAlignment(.center)
+//            .font(.system(size: 10))
+//            .padding(.bottom, 24)
+//            .padding(.top, 4)
+//            .onTapGesture {
+//                isDataPrivacyPresented.toggle()
+//            }
 
             Button("Continue") {
                 onboardingProvider.completeOnboarding()
